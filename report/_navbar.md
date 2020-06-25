@@ -1,3 +1,3 @@
 - [首页](/)
-- [文档](https://sweeter.io)
+- [文档](https://sweeter.io/#/sweetest/)
 - [帮助](/help)

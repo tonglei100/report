@@ -26,7 +26,7 @@
 
 1. 请在启动脚本（如：start.py）里添加生成测试报告的代码 
 
-    ```Python
+    ```python
     # 执行自动化测试
     sweet.plan()
 

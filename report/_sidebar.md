@@ -1,7 +1,7 @@
 * 搜索组
 
-	* [Baidu](new/Baidu)
+	* [Baidu](latest/Baidu)
 
 * Postman组
 
-	* [Echo](new/Echo)
+	* [Echo](latest/Echo)

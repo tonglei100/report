@@ -71,7 +71,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AFKjvLrX_StY3IDx_WRra2JfqrCsLLcLq.mZKI4vm0R2WV4L8DUBlRwe89xB8mXcPwWfx3GMQ2dZY', 'foo1': 'bar1'} | 2.3 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AFKjvLrX_StY3IDx_WRra2JfqrCsLLcLq.mZKI4vm0R2WV4L8DUBlRwe89xB8mXcPwWfx3GMQ2dZY', 'foo1': 'bar1'} | 2.3 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_002
@@ -80,7 +80,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_003
@@ -89,7 +89,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 1.2 | <font color=#00BB00>通过</font> |  |
 
 #### echo_004
@@ -98,7 +98,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_005
@@ -107,7 +107,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AvJA22GQKIbqBOUT_41F-JvvTiTIRdvTX.VBezMq5BSxuuF7KHqNQMFbqNIps8B1Istt1AvlQwx%2FY', 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AvJA22GQKIbqBOUT_41F-JvvTiTIRdvTX.VBezMq5BSxuuF7KHqNQMFbqNIps8B1Istt1AvlQwx%2FY', 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_006
@@ -116,7 +116,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_007
@@ -125,7 +125,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AwN6b1HPSgfMkGnR7ydpt8H3bsH5eizXQ.s%2B86%2B1lmMXKe%2BscGzLLvomEeFaVHjQFWaOONrDzi7lA', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AwN6b1HPSgfMkGnR7ydpt8H3bsH5eizXQ.s%2B86%2B1lmMXKe%2BscGzLLvomEeFaVHjQFWaOONrDzi7lA', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_008
@@ -134,7 +134,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 1.6 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 1.6 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_009
@@ -143,7 +143,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3ACv15VCmWh-u3tJp0Db72RhlkF0yqjKfa.yQxTtHRrrGCkm7jIpGej7qEeF3TFu0rWnjAzSmZknkk', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3ACv15VCmWh-u3tJp0Db72RhlkF0yqjKfa.yQxTtHRrrGCkm7jIpGej7qEeF3TFu0rWnjAzSmZknkk', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 1.2 | <font color=#00BB00>通过</font> |  |
 
 #### echo_010
@@ -152,7 +152,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_011
@@ -161,7 +161,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AUcOXp82a7LIFXkM5dseJqjCZCDhvz_Je.3tmjnHHoC0FynvFp80XFB09SmzIKeU%2FNvIj97HTPSDk', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AUcOXp82a7LIFXkM5dseJqjCZCDhvz_Je.3tmjnHHoC0FynvFp80XFB09SmzIKeU%2FNvIj97HTPSDk', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_012
@@ -170,7 +170,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_013
@@ -179,7 +179,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3A72ubzTJBIebLzu5QjDOzAhbdvwy9kCXC.OStoW3Wb2qS92H9a6oqdZ9AeYHR2wFpk2W3Z2OU6cHQ', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3A72ubzTJBIebLzu5QjDOzAhbdvwy9kCXC.OStoW3Wb2qS92H9a6oqdZ9AeYHR2wFpk2W3Z2OU6cHQ', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_014
@@ -188,7 +188,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_015
@@ -197,7 +197,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3A2mQ77IAy6XtlBknLIAf6mWvOr3OQ7lDj.eMzlxaDh42sSAnwSqEkpJ4L8ngHItMUA4MZSTkXiVUc', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3A2mQ77IAy6XtlBknLIAf6mWvOr3OQ7lDj.eMzlxaDh42sSAnwSqEkpJ4L8ngHItMUA4MZSTkXiVUc', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_016
@@ -206,7 +206,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 1.2 | <font color=#00BB00>通过</font> |  |
 
 #### echo_017
@@ -215,7 +215,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3Ap_Lo4uwvwfmTIuifXPMLX9WauMQRNJVj.UQfwRFg2pEsi7%2B3NVcH1TZbK26gknh4g2BYDdJoRGUs', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3Ap_Lo4uwvwfmTIuifXPMLX9WauMQRNJVj.UQfwRFg2pEsi7%2B3NVcH1TZbK26gknh4g2BYDdJoRGUs', 'foo1': 'bar1'} | 0.9 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 1.2 | <font color=#00BB00>通过</font> |  |
 
 #### echo_018
@@ -224,7 +224,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.9 | <font color=#00BB00>通过</font> |  |
 
 - ### Echo接口测试2
@@ -235,7 +235,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AHrdjr87Cjuj3953mg-bF3eHxmGyz8e2b.32rR0CnOZy5Y2U0%2FhmY7AorUqeOfOJ2WsWLAHdWTHpM', 'foo1': 'bar1'} | 1.2 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AHrdjr87Cjuj3953mg-bF3eHxmGyz8e2b.32rR0CnOZy5Y2U0%2FhmY7AorUqeOfOJ2WsWLAHdWTHpM', 'foo1': 'bar1'} | 1.2 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_102
@@ -244,7 +244,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.7 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.7 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_103
@@ -253,7 +253,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': None, 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': None, 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_104
@@ -262,7 +262,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_105
@@ -271,7 +271,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 1.3 | <font color=#00BB00>通过</font> |  |
 
 #### echo_106
@@ -280,7 +280,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_107
@@ -289,7 +289,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3ABXJNlh09x4rjYWqDwGwBfoLapU34zOqd.bmo0HEnO2wEovZl1MAact5WIz2qGuoS27%2F0DeZjaMxQ', 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3ABXJNlh09x4rjYWqDwGwBfoLapU34zOqd.bmo0HEnO2wEovZl1MAact5WIz2qGuoS27%2F0DeZjaMxQ', 'foo1': 'bar1'} | 1.3 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 1.3 | <font color=#00BB00>通过</font> |  |
 
 #### echo_108
@@ -298,7 +298,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_109
@@ -307,7 +307,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': None, 'foo1': 'bar1'} | 1.2 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': None, 'foo1': 'bar1'} | 1.2 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_110
@@ -316,7 +316,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 1.4 | <font color=#00BB00>通过</font> |  |
 
 #### echo_111
@@ -325,7 +325,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AwC68fxkNg2TlmYejfPVI5P4EVfxO71uJ.gasVCQ55Iy9soxbqRmYEFW2EyjnJOAufOJOL9PajwTk', 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AwC68fxkNg2TlmYejfPVI5P4EVfxO71uJ.gasVCQ55Iy9soxbqRmYEFW2EyjnJOAufOJOL9PajwTk', 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 2.7 | <font color=#00BB00>通过</font> |  |
 
 #### echo_112
@@ -334,7 +334,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.8 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.8 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 1.7 | <font color=#00BB00>通过</font> |  |
 
 #### echo_113
@@ -343,7 +343,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3ASbx4m36EN3tTEf7nNJLDDa7uSBpMlZaO.R4qXcgj7lvWUYx0teIpfTUQqz7jMqqlSD9kuvc8Ul5o', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3ASbx4m36EN3tTEf7nNJLDDa7uSBpMlZaO.R4qXcgj7lvWUYx0teIpfTUQqz7jMqqlSD9kuvc8Ul5o', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.8 | <font color=#00BB00>通过</font> |  |
 
 #### echo_114
@@ -352,7 +352,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.8 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.8 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_115
@@ -361,7 +361,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': 's%3AVP5vCTtCdoNnrynJ9uQjzql0KhvlxIXa.%2Fn96wgEDO%2FIq7pplkrRqaYlXOusuq5l1BSIfscY3hH8', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': 's%3AVP5vCTtCdoNnrynJ9uQjzql0KhvlxIXa.%2Fn96wgEDO%2FIq7pplkrRqaYlXOusuq5l1BSIfscY3hH8', 'foo1': 'bar1'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.5 | <font color=#00BB00>通过</font> |  |
 
 #### echo_116
@@ -370,7 +370,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 0.5 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 1.2 | <font color=#00BB00>通过</font> |  |
 
 #### echo_117
@@ -379,7 +379,7 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}\|\|output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
+| 1 | GET | Echo | Echo-get请求 | params={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user': 'test'} | status_code=200,,<br>json={'args': {'foo1': 'bar1','foo2': 'bar2'}} | cookies={'sails.sid':'\<sails\>'},,json={'args': {'foo1': '\<foo1\>'}}<br>output={'sails': None, 'foo1': 'bar1'} | 0.4 | <font color=#00BB00>通过</font> |  |
 | 2 | GET | Echo | Echo-get请求#bar1#bar2 |  | status_code=200,,<br>json={'args': {'foo1': '\<foo1\>', 'foo2': 'bar2'}} |  | 0.8 | <font color=#00BB00>通过</font> |  |
 
 #### echo_118
@@ -388,5 +388,5 @@
 
 | 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}\|\|output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
+| 1 | POST | Echo | Echo-post请求 | json={'foo1': 'bar1', 'foo2': 'bar2'},,cookies={'user':'xiaoming'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': 'bar2'}} | json={'data': {'foo2': '\<foo2\>'}}<br>output={'foo2': 'bar2'} | 1.2 | <font color=#00BB00>通过</font> |  |
 | 2 | POST | Echo | Echo-post请求 | headers={'Content-Type': 'application/json'},,json={'foo1': 'bar1', 'foo2': 'bar2'} | status_code=200,,<br>json={'data': {'foo1': 'bar1','foo2': '\<foo2\>'}} |  | 4.1 | <font color=#00BB00>通过</font> |  |

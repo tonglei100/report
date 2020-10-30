@@ -53,12 +53,13 @@
 
 **搜索：<测试数据>** |  |  | <font color=#00BB00>通过</font>
 
-| 步骤  | 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
+|步骤| 操作  | 页面  | 元素  | 测试数据  | 预期结果 | 输出数据  | 耗时 | 测试结果 | 备注 |
 |------|-------|-------|------|-----------|---------|-----------|-----|---------|------|
-| 1 | 执行 | 用例片段 | SNIPPET_001*2 | keywords=segmentfault,title=SegmentFault 思否 |  |  | 5.0 | <font color=#00BB00>通过</font> |  |
+| 1| 执行 | 用例片段 | SNIPPET_001*2 | keywords=segmentfault,title=SegmentFault 思否 |  |  | 5.0 | <font color=#00BB00>通过</font> |  |
 | 1*1-1 | 输入 | 百度搜索页面 | 百度搜索页面-搜索框 | text=segmentfault |  |  | 0.9 | <font color=#00BB00>通过</font> |  |
 | 1*1-2 | 点击 | 百度搜索页面 | 百度搜索页面-搜索按钮 |  |  |  | 0.9 | <font color=#00BB00>通过</font> |  |
 | 1*1-3 | 检查 | 百度搜索页面 | 通用-页面title | text=segmentfault_百度搜索 |  | \|\|output={'title': 'segmentfault_百度搜索'} | 0.2 | <font color=#00BB00>通过</font> |  |
 | 1*2-1 | 输入 | 百度搜索页面 | 百度搜索页面-搜索框 | text=豆瓣 |  |  | 0.8 | <font color=#00BB00>通过</font> |  |
 | 1*2-2 | 点击 | 百度搜索页面 | 百度搜索页面-搜索按钮 |  |  |  | 0.9 | <font color=#00BB00>通过</font> |  |
-| 1*2-3 | 检查 | 百度搜索页面 | 通用-页面title | text=豆瓣_百度搜索 |  | \|\|output={'title': '豆瓣_百度搜索'} | 1.1 | <font color=#00BB00>通过</font> |  |
+| 1*2-3 | 检查 | 百度搜索页面 | 通用-页面title | text=豆瓣_百度搜索 |  | \|\|output={'title': '豆瓣_百度搜索'} | 1.1 | <font color=#00BB00>通过</font> |  [预期结果](/report/_media/report.png  ':ignore') |
+
